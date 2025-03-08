@@ -1,8 +1,14 @@
 /*
-Hands on Exercise 26
-
-● Modify the previous program to have your program use the init func to print
-
+Hands-on exercise #27
+	● Create 2 random ints between 0 inclusive and 10 exclusive
+		○ assign them to variables with the identifiers x and y
+	● Print their values
+	● use an if statement to print the correct description
+		○ x and y are both less than 4
+		○ x and y are both greater than 6
+		○ x is greater than or equal to 4 and less than or equal to 6
+		○ y is not 5
+		○ none of the previous cases were met
 */
 
 package main
@@ -12,23 +18,21 @@ import (
 	"math/rand"
 )
 
-func init() {
-	fmt.Println("This is where initialization for my program occurs")
-}
-
 func main() {
-	x := rand.Intn(400)
-	fmt.Printf("x = %v\n", x)
 
-	switch {
-	case x <= 100:
-		fmt.Println("x is between 0 and 100")
-	case x >= 101 && x <= 200:
-		fmt.Println("x is between 101 and 200")
-	case x >= 101 && x <= 250:
-		fmt.Println("x is between 201 and 250")
-	default:
-		fmt.Println("x is over 250")
+	x := rand.Intn(10)
+	y := rand.Intn(10)
+	fmt.Printf("x = %v\ty = %v\n", x, y)
+
+	if x < 4 && y < 4 {
+		fmt.Println("x and y are both less than 4")
+	} else if x > 6 && y > 6 {
+		fmt.Println("x and y are both greater than 6")
+	} else if x >= 4 && x <= 6 {
+		fmt.Println("x is greater than or equal to 4 and less than or equal to 6")
+	} else if y != 5 {
+		fmt.Println("y is not 5")
+	} else {
+		fmt.Println("none of the previous cases were met")
 	}
-
 }
