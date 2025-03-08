@@ -1,7 +1,7 @@
 /*
-Hands-on exercise #31
-	● create a for loop using only a condition
-	● increment or decrement the variable being checked in the condition
+Hands-on exercise #32
+	● create a for loop that uses break statement
+	● increment or decrement the variable being checked as a condition in the loop
 */
 
 package main
@@ -10,11 +10,13 @@ import "fmt"
 
 func main() {
 
-	x := 37
-	for x < 42 {
+	x := 11
+	for {
+		if x < 0 {
+			break
+		}
 		fmt.Printf("x is %v\n", x)
-		x++
+		x--
 	}
-
 	fmt.Println("Done!")
 }
