@@ -1,19 +1,8 @@
 /*
-Hands on Exercise 25
+Hands on Exercise 26
 
-● create a program that uses both SEQUENTIAL and CONDITIONAL control flow. Your program should do the following
-	○ create a random int between 0 and 250
-	○ store the value of that int in a variable with the identifier of x
-		■ func Intn(n int) int
-			● rand.Intn()
-	○ print out the name and value of the variable
-	○ use a switch statement to do the following
-		■ the value is between 0 and 100
-			● print between 0 and 100
-		■ the value is between 101 and 200
-			● print between 101 and 200
-		■ the value is between 201 and 250
-			● print between 201 and 250
+● Modify the previous program to have your program use the init func to print
+
 */
 
 package main
@@ -22,6 +11,10 @@ import (
 	"fmt"
 	"math/rand"
 )
+
+func init() {
+	fmt.Println("This is where initialization for my program occurs")
+}
 
 func main() {
 	x := rand.Intn(400)
