@@ -1,6 +1,8 @@
 /*
-Hands-on exercise #33
-	● use modulus and the continue statement in a loop to print all ODD numbers
+Hands-on exercise #34
+	● create a loop that runs 5 times
+	● nest a loop within the first loop that also prints 5 times
+	● print something in each loop to illustrate what is occurring
 */
 
 package main
@@ -9,12 +11,11 @@ import "fmt"
 
 func main() {
 
-	for i := 0; i < 15; i++ {
-		if i%2 == 0 {
-			continue
+	for x := 0; x < 5; x++ {
+		fmt.Printf("outer loop is %v\t", x)
+		for y := 0; y < 5; y++ {
+			fmt.Printf("inner loop is %v\t", y)
 		}
-		fmt.Printf("x is %v\n", i)
-		i++
+		fmt.Println()
 	}
-	fmt.Println("Done!")
 }
