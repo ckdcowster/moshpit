@@ -1,8 +1,9 @@
 /*
-Hands-on exercise #34
-	● create a loop that runs 5 times
-	● nest a loop within the first loop that also prints 5 times
-	● print something in each loop to illustrate what is occurring
+Hands-on exercise #35
+	● below is the code to create a data structure called a slice of ints
+	● put this code into a program
+		xi := []int{42, 43, 44, 45, 46, 47}
+	● use a for range loop to print each value and the index position of each value
 */
 
 package main
@@ -11,11 +12,8 @@ import "fmt"
 
 func main() {
 
-	for x := 0; x < 5; x++ {
-		fmt.Printf("outer loop is %v\t", x)
-		for y := 0; y < 5; y++ {
-			fmt.Printf("inner loop is %v\t", y)
-		}
-		fmt.Println()
+	xi := []int{42, 43, 44, 45, 46, 47}
+	for index, value := range xi {
+		fmt.Printf("index = %v\tvalue = %v\n", index, value)
 	}
 }
