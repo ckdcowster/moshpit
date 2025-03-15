@@ -1,9 +1,12 @@
 /*
-Hands-on exercise #35
-	● below is the code to create a data structure called a slice of ints
+Hands-on exercise #36
+	● below is the code to create a data structure called a map
 	● put this code into a program
-		xi := []int{42, 43, 44, 45, 46, 47}
-	● use a for range loop to print each value and the index position of each value
+		m := map[string]int{
+				"James": 42,
+				"Moneypenny": 32,
+			}
+	● use a for range loop to print each value and the key associated with each value
 */
 
 package main
@@ -12,8 +15,11 @@ import "fmt"
 
 func main() {
 
-	xi := []int{42, 43, 44, 45, 46, 47}
-	for index, value := range xi {
-		fmt.Printf("index = %v\tvalue = %v\n", index, value)
+	m := map[string]int{
+		"James":      42,
+		"Moneypenny": 32,
+	}
+	for key, value := range m {
+		fmt.Printf("key %v \t value %v\n", key, value)
 	}
 }
