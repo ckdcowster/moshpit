@@ -1,13 +1,13 @@
 /*
-Hands-on exercise #36
-	● below is the code to create a data structure called a map
-	● put this code into a program
-		m := map[string]int{
-				"James": 42,
-				"Moneypenny": 32,
-			}
-	● use a for range loop to print each value and the key associated with each value
-*/
+Hands-on exercise #37
+	● use the code from the previous exercise
+	● add this code to print a single value stored in the map
+		age := m["James"]
+		fmt.Println(age)
+	● now use similar code to use the lookup of "Q" and print that value
+	● now use the "comma ok" idiom to test whether "Q" is actually stored in the map, then
+		print out a statement if it is not stored in the map
+		○ hint: check effective go for the "comma ok"*/
 
 package main
 
@@ -19,7 +19,15 @@ func main() {
 		"James":      42,
 		"Moneypenny": 32,
 	}
-	for key, value := range m {
-		fmt.Printf("key %v \t value %v\n", key, value)
+
+	age := m["James"]
+	fmt.Println(age)
+
+	if age, ok := m["Q"]; !ok {
+		fmt.Println("cannot find Q in map, and the zero value of int is ", age)
+	}
+
+	if age, ok := m["James"]; ok {
+		fmt.Println("James Bond age is ", age)
 	}
 }
