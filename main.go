@@ -1,27 +1,19 @@
 /*
-Hands-on exercise #38
-	● use the "statement statement" idiom to
-		○ initialize x with and random int between 0 inclusive and 5 exclusive
-		○ if x is 3
-	■ print "x is 3"
-	● run that code 100 times
-	● what's the benefit of using the "statement statement" idiom?
+Hands-on exercise 39
+	bool logic test
 */
 
 package main
 
 import (
 	"fmt"
-	"math/rand"
 )
 
 func main() {
 
-	c := 1
-	for i := 0; i < 100; i++ {
-		if x := rand.Intn(5); x == 3 {
-			fmt.Printf("iteration %v \t total count %v  \t x is %v\n", i, c, x)
-			c++
-		}
-	}
+	fmt.Printf("true && true is %v\n", (true && true))
+	fmt.Printf("true && false is  %v\n", (true && false))
+	fmt.Printf("true || true is %v\n", (true || true))
+	fmt.Printf("true || false is %v\n", (true || false))
+	fmt.Printf("!true is %v\n", (!true))
 }
